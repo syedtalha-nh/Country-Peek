@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2563eb;
+  color: white;
+}
+
+.header__brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+
+.search-bar {
+  padding: 1rem 0;
+}
+
+.search-bar__input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.home {
+  padding: 2rem;
+}
+
+.home__placeholder {
+  margin-top: 1rem;
+  color: #666;
+}
+
+.not-found {
+  padding: 2rem;
+}
+
+.not-found h2 {
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  margin-bottom: 1rem;
+}
