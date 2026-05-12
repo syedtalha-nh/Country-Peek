@@ -11,6 +11,7 @@ function Home() {
 
   useEffect(() => {
     if (!query.trim()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCountries([])
       setError(null)
       return

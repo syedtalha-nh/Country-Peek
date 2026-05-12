@@ -51,3 +51,17 @@
 .not-found p {
   margin-bottom: 1rem;
 }
+.fav-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  opacity: 0.9;
+}

@@ -1,33 +1,38 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom'
 
 import Header from './components/Header'
-import Home from './pages/Home'
-import NotFound from './pages/NotFound'
 
-import './styles/App.css'
+import Home from './pages/Home'
+
+import CountryPage from './pages/CountryPage'
+
+import Favourites from './pages/Favourites'
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
 
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-          <Route
-            path="/country/:name"
-            element={<div>Country Detail Page</div>}
-          />
+        <Route
+          path="/country/:code"
+          element={<CountryPage />}
+        />
 
-          <Route
-            path="/favourites"
-            element={<div>Favourites Page</div>}
-          />
-
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
+        <Route
+          path="/favourites"
+          element={<Favourites />}
+        />
+      </Routes>
     </BrowserRouter>
   )
 }
