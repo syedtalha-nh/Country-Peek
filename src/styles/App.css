@@ -167,6 +167,7 @@
 
 .page-status {
   padding: 2rem;
+  color: #666;
 }
 
 .page-status--error {
