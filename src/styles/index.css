@@ -4,10 +4,27 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #f4f4f4;
+  --text: #222222;
+  --card-bg: #ffffff;
+  --header-bg: #2563eb;
+  --input-border: #cccccc;
+}
+
+[data-theme='dark'] {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --card-bg: #1f1f1f;
+  --header-bg: #1e3a8a;
+  --input-border: #444444;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f7fb;
-  color: #222;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica,
+    sans-serif;
 }
 
 a {
