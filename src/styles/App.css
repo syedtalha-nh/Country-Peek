@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #2563eb;
+  background-color: var(--header-bg);
   color: white;
 }
 
@@ -14,29 +14,51 @@
 
 .header__nav {
   display: flex;
-  gap: 1.5rem;
-  font-weight: 600;
+  align-items: center;
+  gap: 1rem;
 }
 
-.search-bar {
-  padding: 1rem 0;
-}
-
-.search-bar__input {
-  width: 100%;
-  max-width: 480px;
-  padding: 0.8rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
+.theme-toggle {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
 }
 
 .home {
   padding: 2rem;
 }
 
-.not-found {
-  padding: 2rem;
+.search-bar {
+  padding-bottom: 1rem;
+}
+
+.search-bar__input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.8rem 1rem;
+  border: 1px solid
+    var(--input-border);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.filter-bar select {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid
+    var(--input-border);
+  background-color: var(--card-bg);
+  color: var(--text);
 }
 
 .cards-grid {
@@ -46,22 +68,21 @@
     minmax(240px, 1fr)
   );
   gap: 1.5rem;
-  padding-top: 1rem;
 }
 
 .card {
   display: block;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: var(--text);
+  box-shadow: 0 2px 8px
+    rgba(0, 0, 0, 0.08);
   transition: 0.2s ease;
-  color: inherit;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .card__flag {
@@ -75,26 +96,15 @@
 }
 
 .card__name {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-  color: #111827;
+  margin-bottom: 1rem;
 }
 
 .card__body p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 0.4rem;
-}
-
-.card__body p span {
-  font-weight: 600;
-  color: #222;
+  margin-bottom: 0.5rem;
 }
 
 .home__status {
   padding-top: 1rem;
-  color: #666;
 }
 
 .home__status--error {
@@ -103,17 +113,19 @@
 
 .country-page {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
 }
 
 .back-btn {
-  background-color: white;
-  border: 1px solid #ddd;
+  margin-bottom: 2rem;
   padding: 0.7rem 1.2rem;
   border-radius: 8px;
+  border: 1px solid
+    var(--input-border);
+  background-color: var(--card-bg);
+  color: var(--text);
   cursor: pointer;
-  margin-bottom: 2rem;
 }
 
 .country-page__layout {
@@ -128,14 +140,8 @@
   border-radius: 12px;
 }
 
-.country-page__name {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
 .country-page__official {
-  color: #666;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .country-page__details {
@@ -145,21 +151,18 @@
   margin-bottom: 2rem;
 }
 
-.country-page__details p {
-  margin-bottom: 0.8rem;
-}
-
 .borders {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .border-badge {
-  border: 1px solid #ccc;
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
-  background-color: white;
+  border: 1px solid
+    var(--input-border);
+  background-color: var(--card-bg);
 }
 
 .page-status {
@@ -178,5 +181,9 @@
 
   .country-page__details {
     grid-template-columns: 1fr;
+  }
+
+  .filter-bar {
+    flex-direction: column;
   }
 }
